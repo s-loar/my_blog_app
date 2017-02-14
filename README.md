@@ -1,4 +1,4 @@
-# README
+# A Simple Blog App
 
 Practice Rails work using BDD and Rails 5.
 
