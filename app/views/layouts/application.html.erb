@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <headder role="banner">
+    <header role="banner">
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -33,14 +33,14 @@
       <div class="row">
         <div class="col-md-12">
           <% flash.each do |key, message| %>
-            <div class="text-center alert alert-<%= key == 'notice' ? 'success' : 'danger'%>">
-              <%= message %>
+            <div class="text-center alert alert-<%= key == 'notice'? 'success': 'danger' %>">
+            <%= message %>
             </div>
           <% end %>
-
           <%= yield %>
         </div>
       </div>
     </div>
+
   </body>
 </html>
