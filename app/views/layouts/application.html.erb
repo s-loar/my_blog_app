@@ -10,7 +10,7 @@
 
   <body>
     <header role="banner">
-      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <nav class="navbar navbar-default navbar-static-top" role="navigation">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -29,18 +29,19 @@
       </nav>
     </header>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <% flash.each do |key, message| %>
-            <div class="text-center alert alert-<%= key == 'notice'? 'success': 'danger' %>">
-            <%= message %>
-            </div>
-          <% end %>
-          <%= yield %>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <% flash.each do |key, message| %>
+          <div class="text-center alert alert-<%= key == 'notice'? 'success': 'danger' %>">
+          <%= message %>
+          </div>
+        <% end %>
+
+        <%= yield %>
       </div>
     </div>
+  </div>
 
   </body>
 </html>
