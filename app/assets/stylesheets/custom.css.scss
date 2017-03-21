@@ -5,7 +5,7 @@ body {
   padding-top: 80px;
   color: #64103F;
   background: #e1e1e1;
-} 
+}
 
 // Navbar styling
 .navbar {
@@ -46,4 +46,38 @@ body {
 // Form styling
 .page-heading, div > label {
   color: #64103F;
+}
+
+// this lets the new line characters work like br tags
+.article-body {
+  white-space: pre-line;
+}
+
+// Listing articles styling
+.article-title {
+  font-weight: bold;
+  font-size: 2.5em;
+  margin-bottom: 0.8em;
+  padding-left: 0.7em;
+}
+
+.article-body {
+  font-size: 1.5em;
+  padding-left: 1.2em;
+  color: #64103F;
+
+}
+
+.author {
+  color: #64103F;
+  padding-left: 25px;
+}
+
+// .article-title {
+//
+// }
+
+.article-detail {
+  margin-top: 20px;
+  color: #0000ff;
 }
