@@ -19,7 +19,14 @@ RSpec.feature "Signing Users In" do
   end
 
   scenario "with invalid credentials" do
-
+    visit "/"
+    click_link "Sign in"
+    fill_in "Email", with: ""
+    fill_in "Password", with: ""
+    click_button "Log in"
+    expect(page).to have_content("Invalid Email or password")
+    expect(page).to have_link("Sign in")
+    expect(page).to have_link("Sign up")
   end
 
 end
