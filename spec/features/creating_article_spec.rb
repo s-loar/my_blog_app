@@ -5,11 +5,6 @@ RSpec.feature "Creating Articles" do
   before do
     @john = User.create!(email: "john@example.com", password: "password")
     login_as(@john)
-    # visit "/"
-    # click_link "Sign in"
-    # fill_in "Email", with: @john.email
-    # fill_in "Password", with: @john.password
-    # click_button "Log in"
   end
 
   scenario "A user creates a new article" do
