@@ -67,7 +67,7 @@
     <% if @article.comments.any? %>
       <div id="messages">
         <% persisted_comments(@comments).each do |comment| %>
-          <%= render comment %>
+          <%= render 'comment', { :comment => comment } %>
         <% end %>
       </div>
     <% else %>
