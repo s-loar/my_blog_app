@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
       if @comment.save
         # Broadcast the comment on the ActionCable channel
         ActionCable.server.broadcast "comments",
-          render(partial: 'comments/comment', object: @comment)
+          render(partial: 'articles/comment', object: @comment)
         flash[:notice] = "Comment has been created."
       else
         flash.now[:alert] = "Comment has not been created."
